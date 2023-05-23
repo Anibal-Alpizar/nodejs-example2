@@ -43,7 +43,7 @@ model Orden {
   fechaOrden DateTime            @default(now())
   usuarioId  Int
   usuario    Usuario             @relation(fields: [usuarioId], references: [id])
-  videojuego OrdenOnVideojuego[]
+  videojuegos OrdenOnVideojuego[]
   updatedAt  DateTime            @default(now()) @updatedAt
 }
 
